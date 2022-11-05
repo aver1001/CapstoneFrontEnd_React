@@ -1,0 +1,72 @@
+body {
+  }
+  
+  .wrapper {
+    position: absolute;
+    left: 45%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    width: 235px;
+    height: 70px;
+    white-space: nowrap;
+  }
+  
+  .focus {
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    font-family: Arial;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    filter: blur(3px);
+    font-size: 65px;
+    opacity: 0.3;
+    color: #fff;
+  }
+  
+  .mask {
+    position: absolute;
+    left: -5px;
+    top: 15px;
+    width: 190px;
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 65px;
+    clip: rect(0px, 190px, 160px, 0px);
+    background: linear-gradient(#fff, #fff 0) no-repeat, linear-gradient(to right, #fff, #fff 0) no-repeat, linear-gradient(to right, #fff, #fff 0) bottom left no-repeat, linear-gradient(to right, #fff, #fff 0) bottom left no-repeat, linear-gradient(#fff, #fff 0) bottom right no-repeat, linear-gradient(#fff, #fff 0) bottom right no-repeat, linear-gradient(#fff, #fff 0) top right no-repeat, linear-gradient(#fff, #fff 0) top right no-repeat;
+    background-size: 10px 2px, 2px 10px, 2px 10px, 10px 2px, 2px 10px, 10px 2px, 10px 2px, 2px 10px, 10px 2px;
+    color: #fff;
+    padding: 5px;
+    transform: translateX(0);
+    box-sizing: border-box;
+    animation: mask 2.5s ease infinite alternate;
+  }
+  
+  .text {
+    transform: translateX(0);
+    animation: text 2.5s ease infinite alternate;
+  }
+  
+  @keyframes mask {
+    to {
+      transform: translateX(170px);
+    }
+  }
+  @keyframes text {
+    to {
+      transform: translateX(-170px);
+    }
+  }
+
+  .bottom{
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 50px;
+    top: 230%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+  }
